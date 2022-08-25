@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+      code_gen_demo|look_builder:
+        enabled: true
+
+builders:
+  look_builder:
+    import: 'package:look_generator/builder.dart'
+    builder_factories: ['lookBuilder']
+    build_extensions: { '.dart': ['.look.dart'] }
+    auto_apply: root_package
+    build_to: source
