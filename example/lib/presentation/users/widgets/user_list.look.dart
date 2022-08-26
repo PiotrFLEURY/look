@@ -7,14 +7,14 @@
 import 'package:example/presentation/users/widgets/user_list.dart';
 import 'package:flutter/material.dart';
 
-main() => runApp(const LookUserListPreviewApp());
+main() => runApp(const LookUserListApp());
 
-class LookUserListPreviewApp extends StatelessWidget {
-  const LookUserListPreviewApp({super.key});
+class LookUserListApp extends StatelessWidget {
+  const LookUserListApp({super.key});
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-      title: 'Looking UserListPreview',
+      title: 'Looking UserList',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const UserListPreview());
+      home: lookBuilder());
 }

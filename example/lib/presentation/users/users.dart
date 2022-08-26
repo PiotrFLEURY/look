@@ -22,6 +22,7 @@ class UsersPage extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           } else if (state is UsersStateLoaded) {
             return UserList(
+              title: '${state.users.length} users found',
               users: state.users,
               onUserTap: (user) {
                 GoRouter.of(context).go('/users/${user.firstName}');

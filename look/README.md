@@ -63,49 +63,36 @@ Run it, and voilà !
 
 ## Additional information
 
-### Simple Widget parameters
+### Passing parameters
 
-For the moment, you can only pass String parameters to the @look annotation.
+Use a builder method to pass parameters to your widget.
 
 ```dart
-@look(
-  parameters: {
-    'text': 'Hello World',
-  },
-)
+@Look(builder: 'myBuilderMethod')
 class MyWidget extends StatelessWidget {
-    final String text;
+  final String text;
+  final MyData data;
+  final MyController controller;
+  final AnyOtherWidget child;
 
-    MyWidget({
-        Key key,
-        this.text,
-    });
+  MyWidget({
+    required this.text,
+    required this.data,
+    required this.controller,
+    required this.child,
+  });
+
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-    );
-  }
-}
-```
-
-### Complex Widget with parameters
-
-To pass more parameters, you can create a dedicated preview widget.
-
-```dart
-@look
-class MyWidgetPreview extends StatelessWidget {
-    @override
-  Widget build(BuildContext context) {
-    return MyWidget(
-      text: 'Hello World',
-      data: MyData(),
-      controller: MyController(),
-      child: AnyOtherWidget(),
-      // ...
-    );
+    // ...
   }
 }
 
+myBuilderMethod() => MyWidget(
+  text: 'Hello World',
+  data: MyData(),
+  controller: MyController(),
+  child: AnyOtherWidget(),
+  // ...
+);
 ```

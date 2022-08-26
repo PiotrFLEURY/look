@@ -1,6 +1,7 @@
 library look_generator;
 
 //import 'package:analyzer/dart/constant/value.dart';
+
 import 'package:analyzer/dart/element/element.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
@@ -22,16 +23,17 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
   ) {
     String className = element.displayName;
     String uri = buildStep.inputId.uri.toString();
-    Map<String, dynamic> arguments = peekArguments(annotation);
 
     final appClassName = 'Look${className}App';
+
+    final builderMethodName = annotation.peek('builder')?.stringValue;
 
     final classBuilder = Class((c) {
       c
         ..name = appClassName
         ..extend = refer('StatelessWidget', 'package:flutter/material.dart')
         ..constructors.add(constructor())
-        ..methods.add(buildMethod(className, arguments));
+        ..methods.add(buildMethod(className, builderMethodName));
     });
 
     //...
@@ -48,24 +50,6 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
         classBuilder,
       ]));
     return DartFormatter().format('${library.accept(emitter)}');
-  }
-
-  /// Parses the [Look] annotation arguments to be passed to the Widget to look
-  Map<String, dynamic> peekArguments(ConstantReader annotation) {
-    return annotation.peek('arguments')?.mapValue.map((key, value) {
-          if (value?.type?.getDisplayString(withNullability: false) ==
-              'String') {
-            return MapEntry(
-              key?.toStringValue() ?? 'unable to parse $key',
-              value?.toStringValue(),
-            );
-          }
-          return MapEntry(
-            key?.toStringValue() ?? 'unable to parse $key',
-            '\'Unknown type ${value?.type}\'',
-          );
-        }) ??
-        {};
   }
 
   /// Generates the constructor for the class.
@@ -89,7 +73,7 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
 
   /// Generates the build method that returns the [className] Widget
   /// wrapped into a MaterialApp
-  Method buildMethod(String className, Map<String, dynamic> arguments) {
+  Method buildMethod(String className, String? builderMethodName) {
     return Method(
       (m) {
         m
@@ -111,21 +95,24 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
               'theme': refer('ThemeData').newInstance([], {
                 'primarySwatch': refer('Colors.blue'),
               }),
-              'home': refer(className).constInstance(
-                [],
-                arguments.map(
-                  (key, value) {
-                    return MapEntry(
-                      key.toString(),
-                      refer('\'${value?.toString()}\''),
-                    );
-                  },
-                ),
-              ),
+              'home': builderMethodName != null
+                  ? refer(builderMethodName).call([])
+                  : refer(className).constInstance([]),
             },
           ).code;
       },
     );
+  }
+
+  Reference referToValue(value) {
+    switch (value.runtimeType) {
+      case String:
+        return refer('\'$value\'');
+      case Function:
+        return refer('() {}');
+      default:
+        return refer('$value');
+    }
   }
 
   /// Generates a main method that runs the [appClassName] Widget to Look.
