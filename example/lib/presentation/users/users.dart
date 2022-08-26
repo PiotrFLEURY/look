@@ -25,7 +25,8 @@ class UsersPage extends StatelessWidget {
               title: '${state.users.length} users found',
               users: state.users,
               onUserTap: (user) {
-                GoRouter.of(context).go('/users/${user.firstName}');
+                context.read<AppCubit>().selectUser(user);
+                GoRouter.of(context).go('/users/${user.hashCode}');
               },
             );
           } else {

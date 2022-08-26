@@ -68,7 +68,7 @@ Run it, and voilà !
 Use a builder method to pass parameters to your widget.
 
 ```dart
-@Look(builder: 'myBuilderMethod')
+@Look('myBuilderMethod')
 class MyWidget extends StatelessWidget {
   final String text;
   final MyData data;
