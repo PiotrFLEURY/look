@@ -4,17 +4,17 @@
 // LookGenerator
 // **************************************************************************
 
-import 'package:example/presentation/chip.dart';
+import 'package:example/presentation/users/widgets/user_list.dart';
 import 'package:flutter/material.dart';
 
-main() => runApp(const LookChipViewLookApp());
+main() => runApp(const LookUserListPreviewApp());
 
-class LookChipViewLookApp extends StatelessWidget {
-  const LookChipViewLookApp({super.key});
+class LookUserListPreviewApp extends StatelessWidget {
+  const LookUserListPreviewApp({super.key});
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-      title: 'Looking ChipViewLook',
+      title: 'Looking UserListPreview',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const ChipViewLook());
+      home: const UserListPreview());
 }

@@ -1,4 +1,4 @@
-import 'package:example/app.dart';
+import 'package:example/presentation/app/app.dart';
 import 'package:flutter/material.dart';
 
 void main() {

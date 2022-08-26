@@ -4,17 +4,17 @@
 // LookGenerator
 // **************************************************************************
 
-import 'package:example/app.dart';
+import 'package:example/presentation/users/widgets/user_tile.dart';
 import 'package:flutter/material.dart';
 
-main() => runApp(const LookMyAppApp());
+main() => runApp(const LookUserTilePreviewApp());
 
-class LookMyAppApp extends StatelessWidget {
-  const LookMyAppApp({super.key});
+class LookUserTilePreviewApp extends StatelessWidget {
+  const LookUserTilePreviewApp({super.key});
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-      title: 'Looking MyApp',
+      title: 'Looking UserTilePreview',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MyApp());
+      home: const UserTilePreview());
 }
