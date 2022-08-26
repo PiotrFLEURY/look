@@ -3,14 +3,14 @@ on: push
 
 jobs:
   build-look:
-    name: Build example app
+    name: Build look package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
-      - name: Build Watchers package
+      - name: Build look package
         run: |
           cd look
           flutter pub get
@@ -18,23 +18,21 @@ jobs:
           flutter format --set-exit-if-changed .
           flutter test
   build-look_generator:
-    needs: build-look
-    name: Build example app
+    name: Build look generator package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
-      - name: Build Watchers package
+      - name: Build look_generator package
         run: |
-          cd example
+          cd look_generator
           flutter pub get
           flutter analyze
           flutter format --set-exit-if-changed .
           flutter test
   build-example:
-    needs: build-look_generator
     name: Build example app
     runs-on: ubuntu-latest
     steps:
@@ -42,7 +40,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
-      - name: Build Watchers package
+      - name: Build example app
         run: |
           cd example
           flutter pub get
