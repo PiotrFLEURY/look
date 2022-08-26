@@ -1,7 +1,7 @@
 name: look
-description: A new Flutter package project.
+description: A widget preview package
 version: 0.0.1
-homepage:
+homepage: https://github.com/PiotrFLEURY/look
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  meta: ^1.7.0
 
 dev_dependencies:
   flutter_test:

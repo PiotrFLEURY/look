@@ -1,6 +1,6 @@
 # Look
 
-Look is a Flutter package for Widget preview generation.
+Look is a Flutter package for Widget preview.
 
 It gives the possibility to start only the widget to preview and not the whole application.
 
@@ -17,6 +17,18 @@ Look package's purpose is to give you the possibility to preview only the widget
 # Features
 
 Just add the `@look` annotation to the widget you want to preview.
+
+```dart
+// my_widget.dart
+
+@look
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+```
 
 Generate sources using `build_runner` using the fancy command line that everyone know now:
 

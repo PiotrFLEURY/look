@@ -1,7 +1,7 @@
 targets:
   $default:
     builders:
-      code_gen_demo|look_builder:
+      look_builder:
         enabled: true
 
 builders:

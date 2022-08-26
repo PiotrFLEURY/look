@@ -1,7 +1,7 @@
 name: look_generator
-description: A new Flutter package project.
+description: Look widget preview source generator
 version: 0.0.1
-homepage:
+homepage: https://github.com/PiotrFLEURY/look
 publish_to: none
 
 environment:
