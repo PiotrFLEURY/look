@@ -334,17 +334,17 @@ packages:
   look:
     dependency: "direct main"
     description:
-      path: "../look"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: look
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   look_generator:
     dependency: "direct dev"
     description:
-      path: "../look_generator"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: look_generator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   matcher:
     dependency: transitive
     description:
