@@ -32,7 +32,7 @@ Add the look package and look_generator to your app dependencies:
 
 ```bash
 flutter pub add look
-flutter pub add --dev look_generator
+flutter pub add --dev look_generator build_runner
 ```
 
 ## Usage

@@ -3,6 +3,7 @@
 ## 1.0.1
 
 * Fix package description
+* Add missing example app
 
 ## 1.0.0
 
