@@ -4,7 +4,7 @@ Look is a Flutter package for Widget preview.
 
 It gives the possibility to start only the widget to preview and not the whole application.
 
-## Features
+# Purpose
 
 Imagine you are working on a Flutter application and you want to work and edit only a specific Widget, page, or whatever.
 
@@ -14,10 +14,7 @@ Let's suppose that you want to work on a deep page in the app. You have to start
 
 But:
 * You just want to work on a specific widget
-* You don't really need to start the whole app
-* You don't really need to generate data
-* You don't really need to be connected to an API or a server
-* You don't really need to be authenticated
+* You don't really need to start the whole app, maybe generate data or be connected to an API or a server with authentication
 * You don't really need to waiste time on all of these things
 
 You main goal is only to work on this deep page.
@@ -28,14 +25,16 @@ Look package gives you the possibility to run only the widget you want to previe
 
 ## Getting started
 
-Add the look package and look_generator to your app dependencies:
+Add look, look_generator and build_runner to your app dependencies:
 
 ```bash
 flutter pub add look
 flutter pub add --dev look_generator build_runner
 ```
 
-## Usage
+# Features
+
+## Previewing a widget
 
 Just add the `@look` annotation to the widget you want to preview.
 
@@ -60,8 +59,6 @@ flutter pub run build_runner build --delete-conflicting-outputs
 A brand new file has been generated beside the original one. Search for the file `*.look.dart`.
 
 Run it, and voilà !
-
-## Additional information
 
 ### Passing parameters
 
@@ -96,3 +93,37 @@ myBuilderMethod() => MyWidget(
   // ...
 );
 ```
+
+## Golden tests with look
+
+Look is also a golden tests factory.
+
+First, create a new dart file in the `test` folder.
+
+```dart
+// test/golden_test.dart
+import 'package:my_widget.dart';
+import 'package:my_theme.dart';
+import 'package:look/look.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+part 'golden_test.lookgolden.dart';
+
+@LookGolden(
+  type: MyWidget,
+  builder: 'myWidgetMethodBuilder',
+  lightTheme: myLightThemeMethod,
+  darkTheme: myDarkThemeMethod,
+  name: 'goldens/MyWidget_golden.png',
+)
+void main() => lookGoldens();
+```
+
+Then, run the test using the following command:
+
+```bash
+flutter pub run build_runner test --delete-conflicting-outputs
+```
+
+Look will generate golden tests for each provided theme.

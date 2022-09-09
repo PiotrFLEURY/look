@@ -80,3 +80,41 @@ myBuilderMethod() => MyWidget(
   // ...
 );
 ```
+
+# Golden tests with look
+
+Look is also a golden tests factory.
+
+First, create a new dart file in the `test` folder.
+
+```dart
+// test/golden_test.dart
+import 'package:my_widget.dart';
+import 'package:my_theme.dart';
+import 'package:look/look.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+part 'golden_test.lookgolden.dart';
+
+@LookGolden(
+  type: MyWidget,
+  builder: 'myWidgetMethodBuilder',
+  lightTheme: myLightThemeMethod,
+  darkTheme: myDarkThemeMethod,
+  name: 'goldens/MyWidget_golden.png',
+)
+void main() => lookGoldens();
+```
+
+Then, run the test using the following command:
+
+```bash
+flutter pub run build_runner test --delete-conflicting-outputs
+```
+
+Look will generate golden tests for each provided theme.
+
+# Coming soon
+
+- [ ] Add multi dimensions to annotation parameters

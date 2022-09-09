@@ -1,6 +1,6 @@
 name: look_generator
 description: Look widget preview source generator
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/PiotrFLEURY/look
 
 environment:
@@ -14,7 +14,8 @@ dependencies:
   dart_style: ^2.2.3
   flutter:
     sdk: flutter
-  look: ^1.0.0 
+  look: #^1.1.0
+    path: ../look
   source_gen: ^1.2.2
 
 dev_dependencies:

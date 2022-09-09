@@ -18,7 +18,9 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        backgroundImage: NetworkImage(user.thumbnailPicture),
+        backgroundImage: user.thumbnailPicture.isEmpty
+            ? null
+            : NetworkImage(user.thumbnailPicture),
       ),
       title: Text(user.firstName),
       subtitle: Text(user.email),

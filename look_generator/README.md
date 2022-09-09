@@ -1,40 +1,20 @@
+# look_generator
+
 This is the generator for the look package.
 
 ## Features
 
-This package will generate runnable dart files to preview any widget decorated with the `@look` annotation.
+Generates a runnable dart file from a widget annotated with `@Look` so as to work only on the widget you want to preview.
 
 ## Getting started
 
-Add the look package and look_generator to your app dependencies:
+Add look, look_generator and build_runner to your app dependencies:
 
 ```bash
 flutter pub add look
-flutter pub add --dev look_generator
+flutter pub add --dev look_generator build_runner
 ```
 
 ## Usage
 
-Just add the `@look` annotation to the widget you want to preview.
-
-```dart
-// my_widget.dart
-
-@look
-class MyWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-```
-
-Generate sources using `build_runner` using the fancy command line that everyone know now:
-
-```bash
-flutter pub run build_runner build --delete-conflicting-outputs
-```
-
-A brand new file has been generated beside the original one. Search for the file `*.look.dart`.
-
-Run it, and voilà !
+Please report to the [look package](https://pub.dev/packages/look) for more information.
