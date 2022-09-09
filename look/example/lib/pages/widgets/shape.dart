@@ -3,12 +3,13 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:look/look.dart';
 
-// ignore: unused_element
-Widget dynamicShapeBuilder() => Center(
-      child: DynamicShape(
-        faces: 6,
-        size: const Size(100, 100),
-        onPressed: () {},
+Widget dynamicShapeBuilder() => Material(
+      child: Center(
+        child: DynamicShape(
+          faces: 6,
+          size: const Size(100, 100),
+          onPressed: () {},
+        ),
       ),
     );
 

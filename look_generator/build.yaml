@@ -3,6 +3,8 @@ targets:
     builders:
       look_builder:
         enabled: true
+      golden_builder:
+        enabled: true
 
 builders:
   look_builder:
@@ -11,3 +13,19 @@ builders:
     build_extensions: { '.dart': ['.look.dart'] }
     auto_apply: root_package
     build_to: source
+    defaults:
+      generate_for:
+        # Only apply to .dart files in the lib directory
+        include:
+        - lib/**
+  golden_builder:
+    import: 'package:look_generator/builder.dart'
+    builder_factories: ['goldenBuilder']
+    build_extensions: { '.dart': ['.look.dart'] }
+    auto_apply: root_package
+    build_to: source
+    defaults:
+      generate_for:
+        # Only apply to .dart files in the test directory
+        include:
+        - test/**

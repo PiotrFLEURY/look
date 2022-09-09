@@ -1,5 +1,9 @@
 # look package changelog
 
+## 1.1.0
+
+* Add golden test generation with `@LookGolden` annotation
+
 ## 1.0.1
 
 * Fix package description
