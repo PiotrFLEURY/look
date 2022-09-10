@@ -29,10 +29,14 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
         ..name = appClassName
         ..extend = refer('StatelessWidget', 'package:flutter/material.dart')
         ..constructors.add(constructor())
-        ..methods.add(buildMethod(className, builderMethodName));
+        ..methods.add(
+          buildMethod(
+            className,
+            builderMethodName,
+          ),
+        );
     });
 
-    //...
     final emitter = DartEmitter(
       orderDirectives: true,
     );
@@ -69,7 +73,10 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
 
   /// Generates the build method that returns the [className] Widget
   /// wrapped into a MaterialApp
-  Method buildMethod(String className, String? builderMethodName) {
+  Method buildMethod(
+    String className,
+    String? builderMethodName,
+  ) {
     return Method(
       (m) {
         m

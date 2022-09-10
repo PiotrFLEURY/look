@@ -11,7 +11,7 @@ builders:
     import: 'package:look_generator/builder.dart'
     builder_factories: ['lookBuilder']
     build_extensions: { '.dart': ['.look.dart'] }
-    auto_apply: root_package
+    auto_apply: dependents
     build_to: source
     defaults:
       generate_for:
@@ -22,7 +22,7 @@ builders:
     import: 'package:look_generator/builder.dart'
     builder_factories: ['goldenBuilder']
     build_extensions: { '.dart': ['.look.dart'] }
-    auto_apply: root_package
+    auto_apply: dependents
     build_to: source
     defaults:
       generate_for:

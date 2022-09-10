@@ -10,6 +10,16 @@
                 "reveal": "always",
                 "panel": "new"
             }
+        },
+        {
+            "label": "Generate look example goldens",
+            "type": "shell",
+            "command": "sh ./scripts/generate_goldens.sh look/example",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
         }
     ]
 }
