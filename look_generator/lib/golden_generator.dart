@@ -11,6 +11,8 @@ import 'package:source_gen/source_gen.dart';
 ///   * the themes
 ///   * the dimensions provided
 class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
+  static const _defaultDimensions = ['390x844'];
+
   /// Generates the golden tests
   @override
   generateForAnnotatedElement(
@@ -20,21 +22,28 @@ class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
   ) {
     final String className =
         annotation.peek('type')!.typeValue.element2!.displayName;
-    final String? builder = annotation.peek('builder')?.stringValue;
+    final String? builder =
+        annotation.peek('builder')?.objectValue.toFunctionValue()?.displayName;
     final String? goldenName = annotation.peek('name')?.stringValue;
     final String? lightTheme = annotation
-        .read('lightTheme')
-        .objectValue
+        .peek('lightTheme')
+        ?.objectValue
         .toFunctionValue()
         ?.displayName;
-    final String? darkTheme =
-        annotation.read('darkTheme').objectValue.toFunctionValue()?.displayName;
+    final String? darkTheme = annotation
+        .peek('darkTheme')
+        ?.objectValue
+        .toFunctionValue()
+        ?.displayName;
     final List<String> dimensions = annotation
             .peek('dimensions')
             ?.listValue
             .map((e) => e.toStringValue()!)
             .toList() ??
-        ['390x844'];
+        _defaultDimensions;
+    if (dimensions.isEmpty) {
+      dimensions.addAll(_defaultDimensions);
+    }
 
     final String referenceFile = buildStep.inputId.uri.pathSegments.last;
 

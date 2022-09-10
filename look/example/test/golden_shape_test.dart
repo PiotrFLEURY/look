@@ -8,7 +8,7 @@ part 'golden_shape_test.lookgolden.dart';
 
 @LookGolden(
   type: DynamicShape,
-  builder: 'dynamicShapeBuilder',
+  builder: dynamicShapeBuilder,
   lightTheme: lightTheme,
   darkTheme: darkTheme,
   name: 'goldens/DynamicShape_golden.png',

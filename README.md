@@ -99,7 +99,7 @@ part 'golden_test.lookgolden.dart';
 
 @LookGolden(
   type: MyWidget,
-  builder: 'myWidgetMethodBuilder',
+  builder: myWidgetMethodBuilder,
   lightTheme: myLightThemeMethod,
   darkTheme: myDarkThemeMethod,
   name: 'goldens/MyWidget_golden.png',

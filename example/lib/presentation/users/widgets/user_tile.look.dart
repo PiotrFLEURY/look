@@ -16,5 +16,5 @@ class LookUserTileApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
       title: 'Looking UserTile',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: lookBuilder());
+      home: userTilePreview());
 }

@@ -2,6 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Generate root example sources",
+            "type": "shell",
+            "command": "sh ./scripts/generate_sources.sh example",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Generate root example goldens",
+            "type": "shell",
+            "command": "sh ./scripts/generate_goldens.sh example",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
             "label": "Generate look example sources",
             "type": "shell",
             "command": "sh ./scripts/generate_sources.sh look/example",
