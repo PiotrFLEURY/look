@@ -9,7 +9,9 @@ const Look look = Look();
 @Target({TargetKind.classType})
 class Look {
   final String? builder;
-  const Look([this.builder]);
+  const Look([
+    this.builder,
+  ]);
 }
 
 /// Annotation used to generate a golden test for the Widget to look
@@ -20,11 +22,13 @@ class LookGolden {
   final String? builder;
   final Function? lightTheme;
   final Function? darkTheme;
+  final List<String> dimensions;
   const LookGolden({
     required this.type,
     this.name,
     this.builder,
     this.lightTheme,
     this.darkTheme,
+    this.dimensions = const [],
   });
 }

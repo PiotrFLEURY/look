@@ -6,8 +6,8 @@ import 'package:look/look.dart';
 Widget dynamicShapeBuilder() => Material(
       child: Center(
         child: DynamicShape(
-          faces: 6,
-          size: const Size(100, 100),
+          faces: 8,
+          size: const Size(400, 400),
           onPressed: () {},
         ),
       ),

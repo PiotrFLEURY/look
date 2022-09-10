@@ -103,6 +103,7 @@ part 'golden_test.lookgolden.dart';
   lightTheme: myLightThemeMethod,
   darkTheme: myDarkThemeMethod,
   name: 'goldens/MyWidget_golden.png',
+  dimensions: ['400x600', '800x600', '800x1200', '1600x1200'],
 )
 void main() => lookGoldens();
 ```
@@ -114,7 +115,3 @@ flutter pub run build_runner test --delete-conflicting-outputs
 ```
 
 Look will generate golden tests for each provided theme.
-
-# Coming soon
-
-- [ ] Add multi dimensions to annotation parameters
