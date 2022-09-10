@@ -112,18 +112,30 @@ part 'golden_test.lookgolden.dart';
 
 @LookGolden(
   type: MyWidget,
-  builder: 'myWidgetMethodBuilder',
+  builder: myWidgetMethodBuilder,
   lightTheme: myLightThemeMethod,
   darkTheme: myDarkThemeMethod,
   name: 'goldens/MyWidget_golden.png',
+  dimensions: ['400x600', '800x600', '800x1200', '1600x1200'],
 )
 void main() => lookGoldens();
 ```
 
-Then, run the test using the following command:
+Then, generate test sources using the following command:
 
 ```bash
 flutter pub run build_runner test --delete-conflicting-outputs
 ```
 
 Look will generate golden tests for each provided theme.
+
+### Available options for @LookGolden
+
+| Option | Type | Description |
+| --- | --- | --- |
+| type | DartType | The type of the widget to test |
+| builder | Function | Method reference of the builder function |
+| lightTheme | String | Method reference of the light theme builder function |
+| darkTheme | String | Method reference of the dark theme builder function |
+| name | String | The name of the golden file |
+| dimensions | List<String> | The dimension list of the golden to test (format: 'width:height'; example: '800x600') | 

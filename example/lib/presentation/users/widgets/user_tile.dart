@@ -3,7 +3,7 @@ import 'package:example/domain/entities/user_example.dart';
 import 'package:flutter/material.dart';
 import 'package:look/look.dart';
 
-@Look('lookBuilder')
+@Look('userTilePreview')
 class UserTile extends StatelessWidget {
   const UserTile({
     Key? key,
@@ -29,7 +29,9 @@ class UserTile extends StatelessWidget {
   }
 }
 
-lookBuilder() => UserTile(
-      user: userExample,
-      onTap: () {},
+userTilePreview() => Material(
+      child: UserTile(
+        user: userExample.copyWith(thumbnailPicture: ''),
+        onTap: () {},
+      ),
     );

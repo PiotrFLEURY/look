@@ -19,7 +19,7 @@ class Look {
 class LookGolden {
   final String? name;
   final Type? type;
-  final String? builder;
+  final Function? builder;
   final Function? lightTheme;
   final Function? darkTheme;
   final List<String> dimensions;
