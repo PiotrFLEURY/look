@@ -25,7 +25,9 @@ class UserView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               CircleAvatar(
-                backgroundImage: NetworkImage(user.largePicture),
+                backgroundImage: user.largePicture.isEmpty
+                    ? null
+                    : NetworkImage(user.largePicture),
                 radius: 100,
               ),
               const SizedBox(height: 48.0),
@@ -46,4 +48,6 @@ class UserView extends StatelessWidget {
   }
 }
 
-userViewBuilder() => const UserView(user: userExample);
+userViewBuilder() => UserView(
+      user: userExample.copyWith(largePicture: ''),
+    );
