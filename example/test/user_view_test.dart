@@ -10,6 +10,5 @@ part 'user_view_test.lookgolden.dart';
   type: UserView,
   builder: userViewBuilder,
   name: "goldens/user_view.png",
-  dimensions: ['800x600'],
 )
 main() => lookGoldens();

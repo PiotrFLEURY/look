@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'look Demo',
       theme: lightTheme(),
       darkTheme: darkTheme(),
-      home: const MyHomePage(title: 'look Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
