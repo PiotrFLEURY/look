@@ -2,6 +2,16 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Build all",
+            "type": "shell",
+            "command": "sh ./scripts/build.sh",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
             "label": "Generate root example sources",
             "type": "shell",
             "command": "sh ./scripts/generate_sources.sh example",
