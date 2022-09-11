@@ -184,7 +184,6 @@ class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
           ),
         )
         ..body = Block.of([
-          // tester.binding.window.physicalSizeTestValue = const Size(390, 844);
           refer('tester')
               .property('binding')
               .property('window')
