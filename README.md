@@ -81,37 +81,171 @@ myBuilderMethod() => MyWidget(
 );
 ```
 
-# Golden tests with look
+## Golden tests with look
 
 Look is also a golden tests factory.
 
 First, create a new dart file in the `test` folder.
 
 ```dart
-// test/golden_test.dart
-import 'package:my_widget.dart';
-import 'package:my_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:example/pages/home.dart';
+import 'package:look/look.dart';
+
+part 'home_page_test.lookgolden.dart';
+
+@LookGolden(type: MyHomePage)
+main() => lookGoldens();
+```
+
+Then, generate test sources using the following command:
+
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+Look will generate golden tests for you.
+
+```dart
+// home_page_test.lookgolden.dart
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+// **************************************************************************
+// GoldenGenerator
+// **************************************************************************
+
+part of 'home_page_test.dart';
+
+lookGoldens() => group('MyHomePage golden tests', () {
+      testWidgets('1080x2340 MyHomePage light theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue =
+            const Size(1080.0, 2340.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: ThemeData(), home: const MyHomePage()));
+        await expectLater(find.byType(MyHomePage),
+            matchesGoldenFile('goldens/MyHomePage_golden_1080x2340_.png'));
+      });
+    });
+```
+
+### Available options for @LookGolden
+
+| Option | Type | Description |
+| --- | --- | --- |
+| type | DartType | The type of the widget to test |
+| builder | Function | Method reference of the builder function |
+| lightTheme | String | Method reference of the light theme builder function |
+| darkTheme | String | Method reference of the dark theme builder function |
+| name | String | The name of the golden file |
+| dimensions | List<String> | The dimension list of the golden to test (format: 'width:height'; example: '800x600') | 
+
+**Example with options**
+
+```dart
+// test/golden_shape_test.dart
+import 'package:example/pages/widgets/shape.dart';
+import 'package:example/theme.dart';
 import 'package:look/look.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-part 'golden_test.lookgolden.dart';
+part 'golden_shape_test.lookgolden.dart';
 
 @LookGolden(
-  type: MyWidget,
-  builder: myWidgetMethodBuilder,
-  lightTheme: myLightThemeMethod,
-  darkTheme: myDarkThemeMethod,
-  name: 'goldens/MyWidget_golden.png',
+  type: DynamicShape,
+  builder: dynamicShapeBuilder,
+  lightTheme: lightTheme,
+  darkTheme: darkTheme,
+  name: 'goldens/DynamicShape_golden.png',
   dimensions: ['400x600', '800x600', '800x1200', '1600x1200'],
 )
-void main() => lookGoldens();
+main() => lookGoldens();
 ```
 
-Then, run the test using the following command:
+**Complex example result**
 
-```bash
-flutter pub run build_runner test --delete-conflicting-outputs
+```dart
+// golden_shape_test.lookgolden.dart
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+// **************************************************************************
+// GoldenGenerator
+// **************************************************************************
+
+part of 'golden_shape_test.dart';
+
+lookGoldens() => group('DynamicShape golden tests', () {
+      testWidgets('400x600 DynamicShape light theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue = const Size(400.0, 600.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: lightTheme(), home: dynamicShapeBuilder()));
+        await expectLater(find.byType(DynamicShape),
+            matchesGoldenFile('goldens/DynamicShape_golden_400x600_.png'));
+      });
+      testWidgets('800x600 DynamicShape light theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue = const Size(800.0, 600.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: lightTheme(), home: dynamicShapeBuilder()));
+        await expectLater(find.byType(DynamicShape),
+            matchesGoldenFile('goldens/DynamicShape_golden_800x600_.png'));
+      });
+      testWidgets('800x1200 DynamicShape light theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue = const Size(800.0, 1200.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: lightTheme(), home: dynamicShapeBuilder()));
+        await expectLater(find.byType(DynamicShape),
+            matchesGoldenFile('goldens/DynamicShape_golden_800x1200_.png'));
+      });
+      testWidgets('1600x1200 DynamicShape light theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue =
+            const Size(1600.0, 1200.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: lightTheme(), home: dynamicShapeBuilder()));
+        await expectLater(find.byType(DynamicShape),
+            matchesGoldenFile('goldens/DynamicShape_golden_1600x1200_.png'));
+      });
+      testWidgets('400x600 DynamicShape dark theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue = const Size(400.0, 600.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: darkTheme(), home: dynamicShapeBuilder()));
+        await expectLater(find.byType(DynamicShape),
+            matchesGoldenFile('goldens/DynamicShape_golden_400x600__dark.png'));
+      });
+      testWidgets('800x600 DynamicShape dark theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue = const Size(800.0, 600.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: darkTheme(), home: dynamicShapeBuilder()));
+        await expectLater(find.byType(DynamicShape),
+            matchesGoldenFile('goldens/DynamicShape_golden_800x600__dark.png'));
+      });
+      testWidgets('800x1200 DynamicShape dark theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue = const Size(800.0, 1200.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: darkTheme(), home: dynamicShapeBuilder()));
+        await expectLater(
+            find.byType(DynamicShape),
+            matchesGoldenFile(
+                'goldens/DynamicShape_golden_800x1200__dark.png'));
+      });
+      testWidgets('1600x1200 DynamicShape dark theme',
+          (WidgetTester tester) async {
+        tester.binding.window.physicalSizeTestValue =
+            const Size(1600.0, 1200.0);
+        await tester.pumpWidget(
+            MaterialApp(theme: darkTheme(), home: dynamicShapeBuilder()));
+        await expectLater(
+            find.byType(DynamicShape),
+            matchesGoldenFile(
+                'goldens/DynamicShape_golden_1600x1200__dark.png'));
+      });
+    });
 ```
-
-Look will generate golden tests for each provided theme.
