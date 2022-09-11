@@ -29,8 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  look:
-    path: ../look
+  look: ^1.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -49,8 +48,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.1.0+1
-  look_generator:
-    path: ../look_generator
+  look_generator: ^1.1.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
