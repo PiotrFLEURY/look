@@ -11,7 +11,7 @@ import 'package:source_gen/source_gen.dart';
 ///   * the themes
 ///   * the dimensions provided
 class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
-  static const _defaultDimensions = ['390x844'];
+  static const _defaultDimensions = ['1080x2340'];
 
   /// Generates the golden tests
   @override
@@ -59,7 +59,7 @@ class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
           mainMethod(
             className,
             builder,
-            goldenName ?? '${className}_golden.png',
+            goldenName ?? 'goldens/${className}_golden.png',
             lightTheme,
             darkTheme,
             dimensions,
@@ -208,7 +208,7 @@ class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
                       ? refer(theme).call([])
                       : refer('ThemeData').newInstance([]),
                   'home': builder == null
-                      ? refer(widgetName).newInstance([])
+                      ? refer(widgetName).constInstance([])
                       : refer(builder).call([]),
                 }),
               ])
