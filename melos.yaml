@@ -22,3 +22,6 @@ scripts:
   test:
     exec: flutter test
     description: Run tests
+  upgrade:
+    exec: flutter pub upgrade --major-versions
+    description: Upgrade dependencies

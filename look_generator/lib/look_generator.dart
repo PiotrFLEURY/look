@@ -25,15 +25,21 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
     final builderMethodName =
         annotation.peek('builder')?.objectValue.toFunctionValue()?.displayName;
 
+    final themeMethodName =
+        annotation.peek('theme')?.objectValue.toFunctionValue()?.displayName;
+
+    List<LibraryImportElement> imports = element.library?.libraryImports ?? [];
+
     final classBuilder = Class((c) {
       c
         ..name = appClassName
         ..extend = refer('StatelessWidget', 'package:flutter/material.dart')
-        ..constructors.add(constructor())
+        ..constructors.add(_constructor())
         ..methods.add(
-          buildMethod(
+          _buildMethod(
             className,
             builderMethodName,
+            themeMethodName,
           ),
         );
     });
@@ -45,16 +51,24 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
       ..directives.addAll([
         Directive.import('package:flutter/material.dart'),
         Directive.import(uri),
+        ...imports.map((import) => _toDirective(import)),
       ])
       ..body.addAll([
-        mainMethod(appClassName),
+        _mainMethod(appClassName),
         classBuilder,
       ]));
     return DartFormatter().format('${library.accept(emitter)}');
   }
 
+  /// Converts a LibraryImportElement to a Directive.import
+  Directive _toDirective(LibraryImportElement import) {
+    return Directive.import(
+      import.importedLibrary!.declaration.source!.uri.toString(),
+    );
+  }
+
   /// Generates the constructor for the class.
-  Constructor constructor() {
+  Constructor _constructor() {
     return Constructor(
       (c) {
         c
@@ -74,9 +88,10 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
 
   /// Generates the build method that returns the [className] Widget
   /// wrapped into a MaterialApp
-  Method buildMethod(
+  Method _buildMethod(
     String className,
     String? builderMethodName,
+    String? themeMethodName,
   ) {
     return Method(
       (m) {
@@ -96,9 +111,11 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
             [],
             {
               'title': refer('\'Looking $className\''),
-              'theme': refer('ThemeData').newInstance([], {
-                'primarySwatch': refer('Colors.blue'),
-              }),
+              'theme': themeMethodName != null
+                  ? refer(themeMethodName).call([])
+                  : refer('ThemeData').newInstance([], {
+                      'primarySwatch': refer('Colors.blue'),
+                    }),
               'home': builderMethodName != null
                   ? refer(builderMethodName).call([])
                   : refer(className).constInstance([]),
@@ -108,7 +125,7 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
     );
   }
 
-  Reference referToValue(value) {
+  Reference _referToValue(value) {
     switch (value.runtimeType) {
       case String:
         return refer('\'$value\'');
@@ -120,10 +137,11 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
   }
 
   /// Generates a main method that runs the [appClassName] Widget to Look.
-  Method mainMethod(String appClassName) {
+  Method _mainMethod(String appClassName) {
     return Method(
       (m) => m
         ..name = 'main'
+        ..returns = refer('void')
         ..body = refer('runApp').newInstance(
           [
             refer(appClassName).constInstance([]),

@@ -3,6 +3,7 @@
 ## 2.0.0
 
 * BREAKING: Replace builder method argument from String to method reference
+* Add theme parameter to `Look` annotation
 
 ## 1.1.0
 

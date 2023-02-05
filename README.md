@@ -249,3 +249,7 @@ lookGoldens() => group('DynamicShape golden tests', () {
       });
     });
 ```
+
+## Created using `dart-lang/build`
+
+For more information on the `build` package, see the [build](https://pub.dev/packages/build) package on pub on visit [build Github repository](https://github.com/dart-lang/build)

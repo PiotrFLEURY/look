@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36408908-6d3a-4ad1-9dda-81ce4aac5c7e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/look/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.look.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.look.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/test/app_test.lookgolden.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/test/app_test.lookgolden.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/test/golden_shape_test.lookgolden.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/test/golden_shape_test.lookgolden.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/test/home_page_test.lookgolden.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/test/home_page_test.lookgolden.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/lib/look.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/lib/look.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look_generator/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/look_generator/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look_generator/lib/look_generator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look_generator/lib/look_generator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/melos.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/melos.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/melos_look.iml" beforeDir="false" afterPath="$PROJECT_DIR$/melos_look.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2LKLvMWaLNXcIHOoVsUMDx5LGPw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/home/piotr/VsCodeProjects/look",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RunManager" selected="Flutter.Flutter Run -&gt; 'global_example'">
+    <configuration name="shape.look.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.look.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter.shape.look.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36408908-6d3a-4ad1-9dda-81ce4aac5c7e" name="Changes" comment="" />
+      <created>1675615059560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675615059560</updated>
+    </task>
+    <servers />
+  </component>
+</project>
