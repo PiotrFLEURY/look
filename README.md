@@ -51,8 +51,13 @@ Run it, and voilà !
 
 Use a builder method to pass parameters to your widget.
 
+Use a theme builder method to pass a theme to your widget (Optional).
+
 ```dart
-@Look('myBuilderMethod')
+@Look(
+  builder: myBuilderMethod,
+  theme: myThemeBuilderMethod, // optional
+)
 class MyWidget extends StatelessWidget {
   final String text;
   final MyData data;
