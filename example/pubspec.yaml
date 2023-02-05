@@ -29,8 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  look: #^1.1.0
-    path: ../look
+  look: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
