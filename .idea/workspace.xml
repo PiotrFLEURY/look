@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="36408908-6d3a-4ad1-9dda-81ce4aac5c7e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/look/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look_generator/lib/look_generator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look_generator/lib/look_generator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look_generator/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/look_generator/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
