@@ -9,10 +9,10 @@ const Look look = Look();
 @Target({TargetKind.classType})
 class Look {
   /// Method reference to the Widget builder function
-  final String? builder;
-  const Look([
+  final Function? builder;
+  const Look({
     this.builder,
-  ]);
+  });
 }
 
 /// Annotation used to generate a golden test for the Widget to look

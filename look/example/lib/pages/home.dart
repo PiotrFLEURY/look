@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:example/pages/widgets/shape.dart';
+import 'package:look_example/pages/widgets/shape.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:example/data/models/random_user_response.dart';
+import 'package:global_example/data/models/random_user_response.dart';
 import 'package:retrofit/http.dart';
 
 part 'random_user_api.g.dart';

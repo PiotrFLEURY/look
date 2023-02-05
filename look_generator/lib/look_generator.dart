@@ -22,7 +22,8 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
 
     final appClassName = 'Look${className}App';
 
-    final builderMethodName = annotation.peek('builder')?.stringValue;
+    final builderMethodName =
+        annotation.peek('builder')?.objectValue.toFunctionValue()?.displayName;
 
     final classBuilder = Class((c) {
       c

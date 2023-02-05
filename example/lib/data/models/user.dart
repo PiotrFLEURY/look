@@ -1,5 +1,5 @@
-import 'package:example/data/models/name.dart';
-import 'package:example/data/models/picture.dart';
+import 'package:global_example/data/models/name.dart';
+import 'package:global_example/data/models/picture.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user.freezed.dart';

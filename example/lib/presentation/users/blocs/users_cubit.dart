@@ -1,5 +1,5 @@
-import 'package:example/domain/repositories/user_repository.dart';
-import 'package:example/presentation/users/states/users_state.dart';
+import 'package:global_example/domain/repositories/user_repository.dart';
+import 'package:global_example/presentation/users/states/users_state.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

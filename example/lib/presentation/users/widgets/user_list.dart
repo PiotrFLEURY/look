@@ -1,10 +1,10 @@
-import 'package:example/domain/entities/user_entity.dart';
-import 'package:example/domain/entities/user_example.dart';
-import 'package:example/presentation/users/widgets/user_tile.dart';
+import 'package:global_example/domain/entities/user_entity.dart';
+import 'package:global_example/domain/entities/user_example.dart';
+import 'package:global_example/presentation/users/widgets/user_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:look/look.dart';
 
-@Look('lookBuilder')
+@Look(builder: lookBuilder)
 class UserList extends StatelessWidget {
   const UserList({
     Key? key,

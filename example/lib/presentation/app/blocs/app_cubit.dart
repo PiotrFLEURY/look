@@ -1,5 +1,5 @@
-import 'package:example/domain/entities/user_entity.dart';
-import 'package:example/presentation/app/states/app_state.dart';
+import 'package:global_example/domain/entities/user_entity.dart';
+import 'package:global_example/presentation/app/states/app_state.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

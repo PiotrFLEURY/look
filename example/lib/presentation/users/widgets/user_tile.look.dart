@@ -4,8 +4,8 @@
 // LookGenerator
 // **************************************************************************
 
-import 'package:example/presentation/users/widgets/user_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:global_example/presentation/users/widgets/user_tile.dart';
 
 main() => runApp(const LookUserTileApp());
 

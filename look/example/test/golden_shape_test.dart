@@ -1,5 +1,5 @@
-import 'package:example/pages/widgets/shape.dart';
-import 'package:example/theme.dart';
+import 'package:look_example/pages/widgets/shape.dart';
+import 'package:look_example/theme.dart';
 import 'package:look/look.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

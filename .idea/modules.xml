@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/example/melos_global_example.iml" filepath="$PROJECT_DIR$/example/melos_global_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/look/melos_look.iml" filepath="$PROJECT_DIR$/look/melos_look.iml" />
+      <module fileurl="file://$PROJECT_DIR$/look/example/melos_look_example.iml" filepath="$PROJECT_DIR$/look/example/melos_look_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/look_generator/melos_look_generator.iml" filepath="$PROJECT_DIR$/look_generator/melos_look_generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_look.iml" filepath="$PROJECT_DIR$/melos_look.iml" />
+    </modules>
+  </component>
+</project>

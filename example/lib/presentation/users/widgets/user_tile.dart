@@ -1,9 +1,9 @@
-import 'package:example/domain/entities/user_entity.dart';
-import 'package:example/domain/entities/user_example.dart';
+import 'package:global_example/domain/entities/user_entity.dart';
+import 'package:global_example/domain/entities/user_example.dart';
 import 'package:flutter/material.dart';
 import 'package:look/look.dart';
 
-@Look('userTilePreview')
+@Look(builder: userTilePreview)
 class UserTile extends StatelessWidget {
   const UserTile({
     Key? key,

@@ -1,4 +1,4 @@
-import 'package:example/domain/entities/user_entity.dart';
+import 'package:global_example/domain/entities/user_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'users_state.freezed.dart';

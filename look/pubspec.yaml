@@ -1,6 +1,6 @@
 name: look
 description: Look helps you to work on a single widget in your real life app. Add the @look annoation, generate sources, run the look file and enjoy!
-version: 1.1.0
+version: 2.0.0
 repository: https://github.com/PiotrFLEURY/look
 homepage: https://github.com/PiotrFLEURY/look
 

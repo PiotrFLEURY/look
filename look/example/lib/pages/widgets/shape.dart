@@ -13,7 +13,7 @@ Widget dynamicShapeBuilder() => Material(
       ),
     );
 
-@Look('dynamicShapeBuilder')
+@Look(builder: dynamicShapeBuilder)
 class DynamicShape extends StatelessWidget {
   final int faces;
   final Size size;

@@ -1,0 +1,24 @@
+name: look
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+packages:
+  - example
+  - look
+  - look/example
+  - look_generator
+
+scripts:
+  analyze:
+    exec: flutter analyze
+    description: Analyze the project
+  build_runner:
+    exec: flutter pub run build_runner build --delete-conflicting-outputs
+    description: Run build_runner build
+  check_format:
+    exec: flutter format --set-exit-if-changed .
+    description: Check formatting
+  test:
+    exec: flutter test
+    description: Run tests
