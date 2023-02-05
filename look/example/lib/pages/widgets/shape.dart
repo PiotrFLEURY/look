@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:look/look.dart';
+import 'package:look_example/theme.dart';
 
 Widget dynamicShapeBuilder() => Material(
       child: Center(
@@ -13,7 +14,10 @@ Widget dynamicShapeBuilder() => Material(
       ),
     );
 
-@Look(builder: dynamicShapeBuilder)
+@Look(
+  builder: dynamicShapeBuilder,
+  theme: lightTheme,
+)
 class DynamicShape extends StatelessWidget {
   final int faces;
   final Size size;

@@ -10,8 +10,10 @@ const Look look = Look();
 class Look {
   /// Method reference to the Widget builder function
   final Function? builder;
+  final Function? theme;
   const Look({
     this.builder,
+    this.theme,
   });
 }
 
