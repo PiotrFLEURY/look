@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36408908-6d3a-4ad1-9dda-81ce4aac5c7e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/look/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/analysis_options.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.look.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/lib/pages/widgets/shape.look.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/test/app_test.lookgolden.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/test/app_test.lookgolden.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/test/golden_shape_test.lookgolden.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/test/golden_shape_test.lookgolden.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/example/test/home_page_test.lookgolden.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/example/test/home_page_test.lookgolden.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look/lib/look.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look/lib/look.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/look_generator/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/look_generator/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/look/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/look/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/look_generator/lib/look_generator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/look_generator/lib/look_generator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/melos.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/melos.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/melos_look.iml" beforeDir="false" afterPath="$PROJECT_DIR$/melos_look.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

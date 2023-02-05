@@ -125,17 +125,6 @@ class LookGenerator extends GeneratorForAnnotation<Look> {
     );
   }
 
-  Reference _referToValue(value) {
-    switch (value.runtimeType) {
-      case String:
-        return refer('\'$value\'');
-      case Function:
-        return refer('() {}');
-      default:
-        return refer('$value');
-    }
-  }
-
   /// Generates a main method that runs the [appClassName] Widget to Look.
   Method _mainMethod(String appClassName) {
     return Method(
