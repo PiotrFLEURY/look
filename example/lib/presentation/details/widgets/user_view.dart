@@ -1,9 +1,9 @@
-import 'package:example/domain/entities/user_entity.dart';
-import 'package:example/domain/entities/user_example.dart';
+import 'package:global_example/domain/entities/user_entity.dart';
+import 'package:global_example/domain/entities/user_example.dart';
 import 'package:flutter/material.dart';
 import 'package:look/look.dart';
 
-@Look('userViewBuilder')
+@Look(builder: userViewBuilder)
 class UserView extends StatelessWidget {
   const UserView({
     Key? key,
@@ -33,12 +33,12 @@ class UserView extends StatelessWidget {
               const SizedBox(height: 48.0),
               Text(
                 '${user.firstName} ${user.lastName}',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 48.0),
               Text(
                 user.email,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ],
           ),

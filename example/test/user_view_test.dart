@@ -1,4 +1,4 @@
-import 'package:example/presentation/details/widgets/user_view.dart';
+import 'package:global_example/presentation/details/widgets/user_view.dart';
 import 'package:look/look.dart';
 
 import 'package:flutter/material.dart';

@@ -4,7 +4,7 @@
 // LookGenerator
 // **************************************************************************
 
-import 'package:example/pages/widgets/shape.dart';
+import 'package:look_example/pages/widgets/shape.dart';
 import 'package:flutter/material.dart';
 
 main() => runApp(const LookDynamicShapeApp());

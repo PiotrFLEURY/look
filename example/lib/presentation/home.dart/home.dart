@@ -1,7 +1,7 @@
-import 'package:example/presentation/home.dart/blocs/home_cubit.dart';
+import 'package:global_example/presentation/home.dart/blocs/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:example/presentation/app/blocs/app_cubit.dart';
+import 'package:global_example/presentation/app/blocs/app_cubit.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {

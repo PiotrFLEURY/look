@@ -1,7 +1,7 @@
-import 'package:example/presentation/app/blocs/app_cubit.dart';
-import 'package:example/presentation/users/blocs/users_cubit.dart';
-import 'package:example/presentation/users/states/users_state.dart';
-import 'package:example/presentation/users/widgets/user_list.dart';
+import 'package:global_example/presentation/app/blocs/app_cubit.dart';
+import 'package:global_example/presentation/users/blocs/users_cubit.dart';
+import 'package:global_example/presentation/users/states/users_state.dart';
+import 'package:global_example/presentation/users/widgets/user_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

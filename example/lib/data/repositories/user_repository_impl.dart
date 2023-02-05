@@ -1,6 +1,6 @@
-import 'package:example/data/sources/random_user_api.dart';
-import 'package:example/domain/entities/user_entity.dart';
-import 'package:example/domain/repositories/user_repository.dart';
+import 'package:global_example/data/sources/random_user_api.dart';
+import 'package:global_example/domain/entities/user_entity.dart';
+import 'package:global_example/domain/repositories/user_repository.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final RandomUserApi randomUserApi;

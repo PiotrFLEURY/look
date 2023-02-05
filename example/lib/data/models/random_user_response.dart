@@ -1,4 +1,4 @@
-import 'package:example/data/models/user.dart';
+import 'package:global_example/data/models/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'random_user_response.freezed.dart';

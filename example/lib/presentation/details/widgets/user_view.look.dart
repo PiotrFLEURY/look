@@ -4,8 +4,8 @@
 // LookGenerator
 // **************************************************************************
 
-import 'package:example/presentation/details/widgets/user_view.dart';
 import 'package:flutter/material.dart';
+import 'package:global_example/presentation/details/widgets/user_view.dart';
 
 main() => runApp(const LookUserViewApp());
 

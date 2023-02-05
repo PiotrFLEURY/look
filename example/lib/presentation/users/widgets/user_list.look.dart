@@ -4,8 +4,8 @@
 // LookGenerator
 // **************************************************************************
 
-import 'package:example/presentation/users/widgets/user_list.dart';
 import 'package:flutter/material.dart';
+import 'package:global_example/presentation/users/widgets/user_list.dart';
 
 main() => runApp(const LookUserListApp());
 

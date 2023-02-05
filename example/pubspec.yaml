@@ -1,4 +1,4 @@
-name: example
+name: global_example
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -29,7 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  look: ^1.1.0
+  look: #^1.1.0
+    path: ../look
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -48,7 +49,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.1.0+1
-  look_generator: ^1.1.0
+  look_generator: #^1.1.0
+    path: ../look_generator
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

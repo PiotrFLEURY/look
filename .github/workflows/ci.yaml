@@ -2,67 +2,34 @@ name: CI
 on: push
 
 jobs:
-  build-look:
-    name: Build look package
+  sanity-check:
+    name: Perform checks with melos
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
-      - name: Build look package
+      - name: Check warnings, format and tests
         run: |
-          cd look
-          flutter pub get
-          flutter analyze
-          flutter format --set-exit-if-changed .
-          flutter test
-  build-look_generator:
-    name: Build look generator package
+          dart pub global activate melos
+          melos bs
+          melos run analyze
+          melos run check_format
+          melos run test
+  build-web:
+    needs: sanity-check
+    name: Build web
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        directory: [example, look/example]
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
-      - name: Build look_generator package
+      - name: Build web
         run: |
-          cd look_generator
-          flutter pub get
-          flutter analyze
-          flutter format --set-exit-if-changed .
-          flutter test
-  build-look-example:
-    name: Build example app
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@v3
-      - name: Setup Flutter SDK
-        uses: subosito/flutter-action@v2
-      - name: Build example app
-        run: |
-          cd look/example
-          flutter pub get
-          flutter analyze
-          flutter format --set-exit-if-changed .
-          flutter test
-          flutter pub run build_runner build --delete-conflicting-outputs
-          flutter build web
-  build-example:
-    name: Build example app
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@v3
-      - name: Setup Flutter SDK
-        uses: subosito/flutter-action@v2
-      - name: Build example app
-        run: |
-          cd example
-          flutter pub get
-          flutter analyze
-          flutter format --set-exit-if-changed .
-          flutter test
-          flutter pub run build_runner build --delete-conflicting-outputs
+          cd ${{ matrix.directory }}
           flutter build web
