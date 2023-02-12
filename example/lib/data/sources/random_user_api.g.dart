@@ -9,7 +9,10 @@ part of 'random_user_api.dart';
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
 class _RandomUserApi implements RandomUserApi {
-  _RandomUserApi(this._dio, {this.baseUrl}) {
+  _RandomUserApi(
+    this._dio, {
+    this.baseUrl,
+  }) {
     baseUrl ??= 'https://randomuser.me/';
   }
 
@@ -23,12 +26,19 @@ class _RandomUserApi implements RandomUserApi {
     final queryParameters = <String, dynamic>{r'results': userCount};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<RandomUserResponse>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/api/',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<RandomUserResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/api/',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = RandomUserResponse.fromJson(_result.data!);
     return value;
   }

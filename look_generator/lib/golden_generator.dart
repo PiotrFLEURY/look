@@ -21,7 +21,7 @@ class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
     BuildStep buildStep,
   ) {
     final String className =
-        annotation.peek('type')!.typeValue.element2!.displayName;
+        annotation.peek('type')!.typeValue.element!.displayName;
     final String? builder =
         annotation.peek('builder')?.objectValue.toFunctionValue()?.displayName;
     final String? goldenName = annotation.peek('name')?.stringValue;

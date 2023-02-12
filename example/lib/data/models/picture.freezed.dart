@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'picture.dart';
 
@@ -32,38 +32,42 @@ mixin _$Picture {
 /// @nodoc
 abstract class $PictureCopyWith<$Res> {
   factory $PictureCopyWith(Picture value, $Res Function(Picture) then) =
-      _$PictureCopyWithImpl<$Res>;
+      _$PictureCopyWithImpl<$Res, Picture>;
+  @useResult
   $Res call({String large, String medium, String thumbnail});
 }
 
 /// @nodoc
-class _$PictureCopyWithImpl<$Res> implements $PictureCopyWith<$Res> {
+class _$PictureCopyWithImpl<$Res, $Val extends Picture>
+    implements $PictureCopyWith<$Res> {
   _$PictureCopyWithImpl(this._value, this._then);
 
-  final Picture _value;
   // ignore: unused_field
-  final $Res Function(Picture) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? large = freezed,
-    Object? medium = freezed,
-    Object? thumbnail = freezed,
+    Object? large = null,
+    Object? medium = null,
+    Object? thumbnail = null,
   }) {
     return _then(_value.copyWith(
-      large: large == freezed
+      large: null == large
           ? _value.large
           : large // ignore: cast_nullable_to_non_nullable
               as String,
-      medium: medium == freezed
+      medium: null == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: thumbnail == freezed
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -73,34 +77,34 @@ abstract class _$$_PictureCopyWith<$Res> implements $PictureCopyWith<$Res> {
           _$_Picture value, $Res Function(_$_Picture) then) =
       __$$_PictureCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String large, String medium, String thumbnail});
 }
 
 /// @nodoc
-class __$$_PictureCopyWithImpl<$Res> extends _$PictureCopyWithImpl<$Res>
+class __$$_PictureCopyWithImpl<$Res>
+    extends _$PictureCopyWithImpl<$Res, _$_Picture>
     implements _$$_PictureCopyWith<$Res> {
   __$$_PictureCopyWithImpl(_$_Picture _value, $Res Function(_$_Picture) _then)
-      : super(_value, (v) => _then(v as _$_Picture));
+      : super(_value, _then);
 
-  @override
-  _$_Picture get _value => super._value as _$_Picture;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? large = freezed,
-    Object? medium = freezed,
-    Object? thumbnail = freezed,
+    Object? large = null,
+    Object? medium = null,
+    Object? thumbnail = null,
   }) {
     return _then(_$_Picture(
-      large: large == freezed
+      large: null == large
           ? _value.large
           : large // ignore: cast_nullable_to_non_nullable
               as String,
-      medium: medium == freezed
+      medium: null == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: thumbnail == freezed
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
@@ -134,21 +138,19 @@ class _$_Picture implements _Picture {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Picture &&
-            const DeepCollectionEquality().equals(other.large, large) &&
-            const DeepCollectionEquality().equals(other.medium, medium) &&
-            const DeepCollectionEquality().equals(other.thumbnail, thumbnail));
+            (identical(other.large, large) || other.large == large) &&
+            (identical(other.medium, medium) || other.medium == medium) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(large),
-      const DeepCollectionEquality().hash(medium),
-      const DeepCollectionEquality().hash(thumbnail));
+  int get hashCode => Object.hash(runtimeType, large, medium, thumbnail);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PictureCopyWith<_$_Picture> get copyWith =>
       __$$_PictureCopyWithImpl<_$_Picture>(this, _$identity);
 

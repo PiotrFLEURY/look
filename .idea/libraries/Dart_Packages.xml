@@ -335,6 +335,7 @@
         <entry key="look">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/look/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/look-2.0.0/lib" />
             </list>
           </value>
@@ -643,6 +644,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/watcher-1.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket_channel-2.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.1/lib" />
+      <root url="file://$PROJECT_DIR$/look/lib" />
       <root url="file://$USER_HOME$/snap/flutter/common/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$USER_HOME$/snap/flutter/common/flutter/packages/flutter/lib" />
       <root url="file://$USER_HOME$/snap/flutter/common/flutter/packages/flutter_test/lib" />

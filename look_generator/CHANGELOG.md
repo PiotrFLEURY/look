@@ -1,5 +1,9 @@
 # look_generator package changelog
 
+## 2.0.1
+
+* Fix `GoldenGenerator` - replace deprecated field `element2` by `element` for DartType
+
 ## 2.0.0
 
 * BREAKING: Replace builder method argument from String to method reference
