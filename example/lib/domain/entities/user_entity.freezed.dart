@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_entity.dart';
 
@@ -33,7 +33,8 @@ mixin _$UserEntity {
 abstract class $UserEntityCopyWith<$Res> {
   factory $UserEntityCopyWith(
           UserEntity value, $Res Function(UserEntity) then) =
-      _$UserEntityCopyWithImpl<$Res>;
+      _$UserEntityCopyWithImpl<$Res, UserEntity>;
+  @useResult
   $Res call(
       {String email,
       String firstName,
@@ -45,53 +46,56 @@ abstract class $UserEntityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserEntityCopyWithImpl<$Res> implements $UserEntityCopyWith<$Res> {
+class _$UserEntityCopyWithImpl<$Res, $Val extends UserEntity>
+    implements $UserEntityCopyWith<$Res> {
   _$UserEntityCopyWithImpl(this._value, this._then);
 
-  final UserEntity _value;
   // ignore: unused_field
-  final $Res Function(UserEntity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
-    Object? firstName = freezed,
-    Object? lastName = freezed,
-    Object? title = freezed,
-    Object? largePicture = freezed,
-    Object? mediumPicture = freezed,
-    Object? thumbnailPicture = freezed,
+    Object? email = null,
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? title = null,
+    Object? largePicture = null,
+    Object? mediumPicture = null,
+    Object? thumbnailPicture = null,
   }) {
     return _then(_value.copyWith(
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      firstName: firstName == freezed
+      firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: lastName == freezed
+      lastName: null == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      largePicture: largePicture == freezed
+      largePicture: null == largePicture
           ? _value.largePicture
           : largePicture // ignore: cast_nullable_to_non_nullable
               as String,
-      mediumPicture: mediumPicture == freezed
+      mediumPicture: null == mediumPicture
           ? _value.mediumPicture
           : mediumPicture // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnailPicture: thumbnailPicture == freezed
+      thumbnailPicture: null == thumbnailPicture
           ? _value.thumbnailPicture
           : thumbnailPicture // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -102,6 +106,7 @@ abstract class _$$_UserEntityCopyWith<$Res>
           _$_UserEntity value, $Res Function(_$_UserEntity) then) =
       __$$_UserEntityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String email,
       String firstName,
@@ -113,51 +118,50 @@ abstract class _$$_UserEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserEntityCopyWithImpl<$Res> extends _$UserEntityCopyWithImpl<$Res>
+class __$$_UserEntityCopyWithImpl<$Res>
+    extends _$UserEntityCopyWithImpl<$Res, _$_UserEntity>
     implements _$$_UserEntityCopyWith<$Res> {
   __$$_UserEntityCopyWithImpl(
       _$_UserEntity _value, $Res Function(_$_UserEntity) _then)
-      : super(_value, (v) => _then(v as _$_UserEntity));
+      : super(_value, _then);
 
-  @override
-  _$_UserEntity get _value => super._value as _$_UserEntity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
-    Object? firstName = freezed,
-    Object? lastName = freezed,
-    Object? title = freezed,
-    Object? largePicture = freezed,
-    Object? mediumPicture = freezed,
-    Object? thumbnailPicture = freezed,
+    Object? email = null,
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? title = null,
+    Object? largePicture = null,
+    Object? mediumPicture = null,
+    Object? thumbnailPicture = null,
   }) {
     return _then(_$_UserEntity(
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      firstName: firstName == freezed
+      firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: lastName == freezed
+      lastName: null == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      largePicture: largePicture == freezed
+      largePicture: null == largePicture
           ? _value.largePicture
           : largePicture // ignore: cast_nullable_to_non_nullable
               as String,
-      mediumPicture: mediumPicture == freezed
+      mediumPicture: null == mediumPicture
           ? _value.mediumPicture
           : mediumPicture // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnailPicture: thumbnailPicture == freezed
+      thumbnailPicture: null == thumbnailPicture
           ? _value.thumbnailPicture
           : thumbnailPicture // ignore: cast_nullable_to_non_nullable
               as String,
@@ -202,31 +206,27 @@ class _$_UserEntity implements _UserEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserEntity &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.firstName, firstName) &&
-            const DeepCollectionEquality().equals(other.lastName, lastName) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.largePicture, largePicture) &&
-            const DeepCollectionEquality()
-                .equals(other.mediumPicture, mediumPicture) &&
-            const DeepCollectionEquality()
-                .equals(other.thumbnailPicture, thumbnailPicture));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.largePicture, largePicture) ||
+                other.largePicture == largePicture) &&
+            (identical(other.mediumPicture, mediumPicture) ||
+                other.mediumPicture == mediumPicture) &&
+            (identical(other.thumbnailPicture, thumbnailPicture) ||
+                other.thumbnailPicture == thumbnailPicture));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(firstName),
-      const DeepCollectionEquality().hash(lastName),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(largePicture),
-      const DeepCollectionEquality().hash(mediumPicture),
-      const DeepCollectionEquality().hash(thumbnailPicture));
+  int get hashCode => Object.hash(runtimeType, email, firstName, lastName,
+      title, largePicture, mediumPicture, thumbnailPicture);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserEntityCopyWith<_$_UserEntity> get copyWith =>
       __$$_UserEntityCopyWithImpl<_$_UserEntity>(this, _$identity);
 }

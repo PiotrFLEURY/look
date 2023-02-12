@@ -1,0 +1,4 @@
+*.g.dart linguist-generated
+*.freezed.dart linguist-generated
+*.look.dart linguist-generated
+*.lookgolden.dart linguist-generated

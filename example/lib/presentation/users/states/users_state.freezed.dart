@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'users_state.dart';
 
@@ -25,9 +25,9 @@ mixin _$UsersState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int userCount)? loading,
-    TResult Function(int userCount, List<UserEntity> users)? loaded,
-    TResult Function()? error,
+    TResult? Function(int userCount)? loading,
+    TResult? Function(int userCount, List<UserEntity> users)? loaded,
+    TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +47,9 @@ mixin _$UsersState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UsersStateLoading value)? loading,
-    TResult Function(UsersStateLoaded value)? loaded,
-    TResult Function(UsersStateError value)? error,
+    TResult? Function(UsersStateLoading value)? loading,
+    TResult? Function(UsersStateLoaded value)? loaded,
+    TResult? Function(UsersStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,16 +66,18 @@ mixin _$UsersState {
 abstract class $UsersStateCopyWith<$Res> {
   factory $UsersStateCopyWith(
           UsersState value, $Res Function(UsersState) then) =
-      _$UsersStateCopyWithImpl<$Res>;
+      _$UsersStateCopyWithImpl<$Res, UsersState>;
 }
 
 /// @nodoc
-class _$UsersStateCopyWithImpl<$Res> implements $UsersStateCopyWith<$Res> {
+class _$UsersStateCopyWithImpl<$Res, $Val extends UsersState>
+    implements $UsersStateCopyWith<$Res> {
   _$UsersStateCopyWithImpl(this._value, this._then);
 
-  final UsersState _value;
   // ignore: unused_field
-  final $Res Function(UsersState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -83,26 +85,25 @@ abstract class _$$UsersStateLoadingCopyWith<$Res> {
   factory _$$UsersStateLoadingCopyWith(
           _$UsersStateLoading value, $Res Function(_$UsersStateLoading) then) =
       __$$UsersStateLoadingCopyWithImpl<$Res>;
+  @useResult
   $Res call({int userCount});
 }
 
 /// @nodoc
 class __$$UsersStateLoadingCopyWithImpl<$Res>
-    extends _$UsersStateCopyWithImpl<$Res>
+    extends _$UsersStateCopyWithImpl<$Res, _$UsersStateLoading>
     implements _$$UsersStateLoadingCopyWith<$Res> {
   __$$UsersStateLoadingCopyWithImpl(
       _$UsersStateLoading _value, $Res Function(_$UsersStateLoading) _then)
-      : super(_value, (v) => _then(v as _$UsersStateLoading));
+      : super(_value, _then);
 
-  @override
-  _$UsersStateLoading get _value => super._value as _$UsersStateLoading;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userCount = freezed,
+    Object? userCount = null,
   }) {
     return _then(_$UsersStateLoading(
-      userCount == freezed
+      null == userCount
           ? _value.userCount
           : userCount // ignore: cast_nullable_to_non_nullable
               as int,
@@ -128,15 +129,16 @@ class _$UsersStateLoading implements UsersStateLoading {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UsersStateLoading &&
-            const DeepCollectionEquality().equals(other.userCount, userCount));
+            (identical(other.userCount, userCount) ||
+                other.userCount == userCount));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(userCount));
+  int get hashCode => Object.hash(runtimeType, userCount);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$UsersStateLoadingCopyWith<_$UsersStateLoading> get copyWith =>
       __$$UsersStateLoadingCopyWithImpl<_$UsersStateLoading>(this, _$identity);
 
@@ -153,9 +155,9 @@ class _$UsersStateLoading implements UsersStateLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int userCount)? loading,
-    TResult Function(int userCount, List<UserEntity> users)? loaded,
-    TResult Function()? error,
+    TResult? Function(int userCount)? loading,
+    TResult? Function(int userCount, List<UserEntity> users)? loaded,
+    TResult? Function()? error,
   }) {
     return loading?.call(userCount);
   }
@@ -187,9 +189,9 @@ class _$UsersStateLoading implements UsersStateLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UsersStateLoading value)? loading,
-    TResult Function(UsersStateLoaded value)? loaded,
-    TResult Function(UsersStateError value)? error,
+    TResult? Function(UsersStateLoading value)? loading,
+    TResult? Function(UsersStateLoaded value)? loaded,
+    TResult? Function(UsersStateError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -223,31 +225,30 @@ abstract class _$$UsersStateLoadedCopyWith<$Res> {
   factory _$$UsersStateLoadedCopyWith(
           _$UsersStateLoaded value, $Res Function(_$UsersStateLoaded) then) =
       __$$UsersStateLoadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({int userCount, List<UserEntity> users});
 }
 
 /// @nodoc
 class __$$UsersStateLoadedCopyWithImpl<$Res>
-    extends _$UsersStateCopyWithImpl<$Res>
+    extends _$UsersStateCopyWithImpl<$Res, _$UsersStateLoaded>
     implements _$$UsersStateLoadedCopyWith<$Res> {
   __$$UsersStateLoadedCopyWithImpl(
       _$UsersStateLoaded _value, $Res Function(_$UsersStateLoaded) _then)
-      : super(_value, (v) => _then(v as _$UsersStateLoaded));
+      : super(_value, _then);
 
-  @override
-  _$UsersStateLoaded get _value => super._value as _$UsersStateLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userCount = freezed,
-    Object? users = freezed,
+    Object? userCount = null,
+    Object? users = null,
   }) {
     return _then(_$UsersStateLoaded(
-      userCount == freezed
+      null == userCount
           ? _value.userCount
           : userCount // ignore: cast_nullable_to_non_nullable
               as int,
-      users == freezed
+      null == users
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<UserEntity>,
@@ -266,6 +267,7 @@ class _$UsersStateLoaded implements UsersStateLoaded {
   final List<UserEntity> _users;
   @override
   List<UserEntity> get users {
+    if (_users is EqualUnmodifiableListView) return _users;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_users);
   }
@@ -280,18 +282,18 @@ class _$UsersStateLoaded implements UsersStateLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UsersStateLoaded &&
-            const DeepCollectionEquality().equals(other.userCount, userCount) &&
+            (identical(other.userCount, userCount) ||
+                other.userCount == userCount) &&
             const DeepCollectionEquality().equals(other._users, _users));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(userCount),
-      const DeepCollectionEquality().hash(_users));
+      runtimeType, userCount, const DeepCollectionEquality().hash(_users));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$UsersStateLoadedCopyWith<_$UsersStateLoaded> get copyWith =>
       __$$UsersStateLoadedCopyWithImpl<_$UsersStateLoaded>(this, _$identity);
 
@@ -308,9 +310,9 @@ class _$UsersStateLoaded implements UsersStateLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int userCount)? loading,
-    TResult Function(int userCount, List<UserEntity> users)? loaded,
-    TResult Function()? error,
+    TResult? Function(int userCount)? loading,
+    TResult? Function(int userCount, List<UserEntity> users)? loaded,
+    TResult? Function()? error,
   }) {
     return loaded?.call(userCount, users);
   }
@@ -342,9 +344,9 @@ class _$UsersStateLoaded implements UsersStateLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UsersStateLoading value)? loading,
-    TResult Function(UsersStateLoaded value)? loaded,
-    TResult Function(UsersStateError value)? error,
+    TResult? Function(UsersStateLoading value)? loading,
+    TResult? Function(UsersStateLoaded value)? loaded,
+    TResult? Function(UsersStateError value)? error,
   }) {
     return loaded?.call(this);
   }
@@ -384,14 +386,11 @@ abstract class _$$UsersStateErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$UsersStateErrorCopyWithImpl<$Res>
-    extends _$UsersStateCopyWithImpl<$Res>
+    extends _$UsersStateCopyWithImpl<$Res, _$UsersStateError>
     implements _$$UsersStateErrorCopyWith<$Res> {
   __$$UsersStateErrorCopyWithImpl(
       _$UsersStateError _value, $Res Function(_$UsersStateError) _then)
-      : super(_value, (v) => _then(v as _$UsersStateError));
-
-  @override
-  _$UsersStateError get _value => super._value as _$UsersStateError;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -426,9 +425,9 @@ class _$UsersStateError implements UsersStateError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int userCount)? loading,
-    TResult Function(int userCount, List<UserEntity> users)? loaded,
-    TResult Function()? error,
+    TResult? Function(int userCount)? loading,
+    TResult? Function(int userCount, List<UserEntity> users)? loaded,
+    TResult? Function()? error,
   }) {
     return error?.call();
   }
@@ -460,9 +459,9 @@ class _$UsersStateError implements UsersStateError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UsersStateLoading value)? loading,
-    TResult Function(UsersStateLoaded value)? loaded,
-    TResult Function(UsersStateError value)? error,
+    TResult? Function(UsersStateLoading value)? loading,
+    TResult? Function(UsersStateLoaded value)? loaded,
+    TResult? Function(UsersStateError value)? error,
   }) {
     return error?.call(this);
   }

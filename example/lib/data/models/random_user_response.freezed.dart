@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'random_user_response.dart';
 
@@ -32,29 +32,32 @@ mixin _$RandomUserResponse {
 abstract class $RandomUserResponseCopyWith<$Res> {
   factory $RandomUserResponseCopyWith(
           RandomUserResponse value, $Res Function(RandomUserResponse) then) =
-      _$RandomUserResponseCopyWithImpl<$Res>;
+      _$RandomUserResponseCopyWithImpl<$Res, RandomUserResponse>;
+  @useResult
   $Res call({List<User> results});
 }
 
 /// @nodoc
-class _$RandomUserResponseCopyWithImpl<$Res>
+class _$RandomUserResponseCopyWithImpl<$Res, $Val extends RandomUserResponse>
     implements $RandomUserResponseCopyWith<$Res> {
   _$RandomUserResponseCopyWithImpl(this._value, this._then);
 
-  final RandomUserResponse _value;
   // ignore: unused_field
-  final $Res Function(RandomUserResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
+    Object? results = null,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
+      results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as List<User>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -65,26 +68,25 @@ abstract class _$$_RandomUserResponseCopyWith<$Res>
           $Res Function(_$_RandomUserResponse) then) =
       __$$_RandomUserResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<User> results});
 }
 
 /// @nodoc
 class __$$_RandomUserResponseCopyWithImpl<$Res>
-    extends _$RandomUserResponseCopyWithImpl<$Res>
+    extends _$RandomUserResponseCopyWithImpl<$Res, _$_RandomUserResponse>
     implements _$$_RandomUserResponseCopyWith<$Res> {
   __$$_RandomUserResponseCopyWithImpl(
       _$_RandomUserResponse _value, $Res Function(_$_RandomUserResponse) _then)
-      : super(_value, (v) => _then(v as _$_RandomUserResponse));
+      : super(_value, _then);
 
-  @override
-  _$_RandomUserResponse get _value => super._value as _$_RandomUserResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
+    Object? results = null,
   }) {
     return _then(_$_RandomUserResponse(
-      results: results == freezed
+      results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
               as List<User>,
@@ -104,6 +106,7 @@ class _$_RandomUserResponse implements _RandomUserResponse {
   final List<User> _results;
   @override
   List<User> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
   }
@@ -128,6 +131,7 @@ class _$_RandomUserResponse implements _RandomUserResponse {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RandomUserResponseCopyWith<_$_RandomUserResponse> get copyWith =>
       __$$_RandomUserResponseCopyWithImpl<_$_RandomUserResponse>(
           this, _$identity);
