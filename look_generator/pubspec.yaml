@@ -1,5 +1,5 @@
 name: look_generator
-description: Look widget preview source generator
+description: Look widget preview source generator to create runnable single widget and goldens easily
 version: 2.0.1
 homepage: https://github.com/PiotrFLEURY/look
 
@@ -8,7 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  analyzer: ">=4.6.0 <6.0.0"
+  analyzer: ^5.4.0
   build: ^2.3.0
   code_builder: ^4.2.0
   dart_style: ^2.2.3
