@@ -8,6 +8,7 @@ packages:
   - look
   - look/example
   - look_generator
+  - look_generator/example
 
 scripts:
   analyze:
