@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/look_generator/example/melos_example.iml" filepath="$PROJECT_DIR$/look_generator/example/melos_example.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/melos_global_example.iml" filepath="$PROJECT_DIR$/example/melos_global_example.iml" />
       <module fileurl="file://$PROJECT_DIR$/look/melos_look.iml" filepath="$PROJECT_DIR$/look/melos_look.iml" />
       <module fileurl="file://$PROJECT_DIR$/look/example/melos_look_example.iml" filepath="$PROJECT_DIR$/look/example/melos_look_example.iml" />
