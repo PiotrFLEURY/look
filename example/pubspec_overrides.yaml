@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: look,look_generator
+dependency_overrides:
+  look:
+    path: ../look
+  look_generator:
+    path: ../look_generator

@@ -1,5 +1,9 @@
 {
-    "image": "cirrusci/flutter",
+    "name": "Piotr FLEURY Flutter dev container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": { "VARIANT" : "stable" }
+    },
     "forwardPorts": [3000],
     "customizations": {
         // Configure properties specific to VS Code.
