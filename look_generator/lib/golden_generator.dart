@@ -185,11 +185,8 @@ class GoldenGenerator extends GeneratorForAnnotation<LookGolden> {
         )
         ..body = Block.of([
           refer('tester')
-              .property('binding')
-              .property('window')
-              .property(
-                'physicalSizeTestValue',
-              )
+              .property('view')
+              .property('physicalSize')
               .assign(
                 refer('Size').constInstance([
                   literalNum(double.parse(width)),

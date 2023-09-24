@@ -1,7 +1,7 @@
 name: look
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=2.18.0 <4.0.0"
 
 packages:
   - example
@@ -17,12 +17,21 @@ scripts:
   build_runner:
     exec: flutter pub run build_runner build --delete-conflicting-outputs
     description: Run build_runner build
+  format:
+    exec: dart format .
+    description: Formatting files
   check_format:
-    exec: flutter format --set-exit-if-changed .
+    exec: dart format --set-exit-if-changed .
     description: Check formatting
   test:
     exec: flutter test
     description: Run tests
+  golden:
+    exec: flutter test --update-goldens
+    description: Update Golden files
   upgrade:
     exec: flutter pub upgrade --major-versions
     description: Upgrade dependencies
+  fix:
+    exec: dart fix --apply
+    description: Apply Dart fix

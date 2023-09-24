@@ -1,5 +1,9 @@
 # look_generator package changelog
 
+## 2.1.0
+
+* Chore: Update dependencies
+
 ## 2.0.1
 
 * Fix `GoldenGenerator` - replace deprecated field `element2` by `element` for DartType

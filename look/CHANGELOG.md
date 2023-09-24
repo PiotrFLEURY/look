@@ -1,5 +1,9 @@
 # look package changelog
 
+## 2.1.0
+
+* Chore: Update dependencies
+
 ## 2.0.0
 
 * BREAKING: Replace builder method argument from String to method reference
