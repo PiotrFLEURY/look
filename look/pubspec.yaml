@@ -1,11 +1,11 @@
 name: look
 description: Look helps you to work on a single widget in your real life app. Add the @look annoation, generate sources, run the look file and enjoy!
-version: 2.0.0
+version: 2.1.0
 repository: https://github.com/PiotrFLEURY/look
 homepage: https://github.com/PiotrFLEURY/look
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=2.17.6 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

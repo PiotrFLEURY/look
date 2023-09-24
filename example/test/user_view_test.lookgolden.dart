@@ -12,7 +12,7 @@ lookGoldens() => group(
         testWidgets(
           '1080x2340 UserView light theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               1080.0,
               2340.0,
             );

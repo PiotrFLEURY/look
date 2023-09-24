@@ -12,7 +12,7 @@ lookGoldens() => group(
         testWidgets(
           '400x600 DynamicShape light theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               400.0,
               600.0,
             );
@@ -29,7 +29,7 @@ lookGoldens() => group(
         testWidgets(
           '800x600 DynamicShape light theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               800.0,
               600.0,
             );
@@ -46,7 +46,7 @@ lookGoldens() => group(
         testWidgets(
           '800x1200 DynamicShape light theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               800.0,
               1200.0,
             );
@@ -63,7 +63,7 @@ lookGoldens() => group(
         testWidgets(
           '1600x1200 DynamicShape light theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               1600.0,
               1200.0,
             );
@@ -80,7 +80,7 @@ lookGoldens() => group(
         testWidgets(
           '400x600 DynamicShape dark theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               400.0,
               600.0,
             );
@@ -98,7 +98,7 @@ lookGoldens() => group(
         testWidgets(
           '800x600 DynamicShape dark theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               800.0,
               600.0,
             );
@@ -116,7 +116,7 @@ lookGoldens() => group(
         testWidgets(
           '800x1200 DynamicShape dark theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               800.0,
               1200.0,
             );
@@ -134,7 +134,7 @@ lookGoldens() => group(
         testWidgets(
           '1600x1200 DynamicShape dark theme',
           (WidgetTester tester) async {
-            tester.binding.window.physicalSizeTestValue = const Size(
+            tester.view.physicalSize = const Size(
               1600.0,
               1200.0,
             );
