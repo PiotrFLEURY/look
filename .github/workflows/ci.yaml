@@ -1,6 +1,10 @@
 name: CI
 on: push
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   sanity-check:
     name: Perform checks with melos
