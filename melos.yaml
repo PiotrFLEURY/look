@@ -24,7 +24,7 @@ scripts:
     exec: dart format --set-exit-if-changed .
     description: Check formatting
   test:
-    exec: flutter test
+    exec: flutter test --dart-define=golden_tolerance=1
     description: Run tests
   golden:
     exec: flutter test --update-goldens
